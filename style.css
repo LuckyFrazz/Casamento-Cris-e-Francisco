@@ -44,30 +44,56 @@ a { color: inherit; }
 .button-light:hover { background: white; color: var(--olive-dark); }
 .hero-bottom { z-index: 2; text-align: center; padding: 0 0 37px; letter-spacing: .23em; font-size: .58rem; }
 .section { padding: 100px 7%; text-align: center; }
-.intro { background: var(--cream); }
+.intro {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(rgba(248, 244, 236, .88), rgba(248, 244, 236, .91)),
+    url("casamentofundo.jpeg") center 45% / cover;
+}
 .section h2, .countdown-inner h2, .rsvp-card h2 { font: 400 clamp(2.6rem, 5vw, 4.1rem)/.98 var(--serif); margin: 14px 0 0; }
 .section h2 em, .rsvp-card h2 em { color: var(--olive); font-weight: 400; }
 .ornament-dark { color: var(--gold); margin: 25px auto; }
 .body-copy { max-width: 600px; margin: 0 auto; font-size: .87rem; line-height: 2; color: var(--muted); }
 .signature { margin-top: 27px; font: italic 1.8rem var(--serif); color: var(--olive); }
-.countdown-section { padding: 78px 6%; background: var(--olive-dark); color: var(--cream); text-align: center; }
+.countdown-section {
+  position: relative;
+  isolation: isolate;
+  padding: 78px 6%;
+  background:
+    linear-gradient(rgba(34, 47, 35, .80), rgba(34, 47, 35, .84)),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=85") center 50% / cover;
+  color: var(--cream);
+  text-align: center;
+}
 .countdown-inner h2 { margin-bottom: 36px; }
 .countdown { display: flex; justify-content: center; gap: clamp(14px, 5vw, 58px); }
 .countdown div { min-width: 70px; display: flex; flex-direction: column; gap: 8px; }
 .countdown strong { font: 400 clamp(2.3rem, 5vw, 3.8rem) var(--serif); color: #e1cca0; }
 .countdown span { font-size: .62rem; text-transform: uppercase; letter-spacing: .15em; }
 .countdown-message { margin: 28px 0 0; color: #e2e0d6; font-size: .78rem; }
-.details { background: var(--paper); }
+.details {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(rgba(202, 197, 182, 0.87), rgba(255, 253, 248, .91)),
+    url("https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1800&q=85") center 48% / cover;
+}
 .details-grid { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 1050px; gap: 20px; margin: 48px auto 0; }
-.detail-card { padding: 34px 22px; border: 1px solid var(--line); background: #fffefa; }
+.detail-card { padding: 34px 22px; border: 1px solid var(--line); background: rgba(255, 254, 250, .94); backdrop-filter: blur(2px); }
 .detail-icon { font: 2.1rem var(--serif); color: var(--gold); margin-bottom: 16px; }
 .detail-card .eyebrow { color: var(--olive); }
 .detail-card h3 { font: 500 1.7rem/1.1 var(--serif); margin: 15px 0; }
 .detail-card p:not(.eyebrow) { color: var(--muted); font-size: .77rem; line-height: 1.8; }
 .text-link { display: inline-block; color: var(--olive); font-size: .75rem; text-underline-offset: 4px; margin-top: 9px; }
 .notice { margin: 28px auto 0; max-width: 720px; font-size: .73rem; line-height: 1.8; color: var(--muted); }
-.rsvp-section { padding: 95px 6%; background: #eae9df; }
-.rsvp-card { max-width: 650px; margin: 0 auto; padding: clamp(28px, 6vw, 58px); background: var(--paper); text-align: center; border: 1px solid rgba(179,154,105,.35); box-shadow: 0 18px 60px rgba(52,55,46,.06); }
+.rsvp-section {
+  padding: 95px 6%;
+  background:
+    linear-gradient(rgba(234, 233, 223, .83), rgba(234, 233, 223, .88)),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85") center 52% / cover;
+}
+.rsvp-card { max-width: 650px; margin: 0 auto; padding: clamp(28px, 6vw, 58px); background: rgba(255, 253, 248, .96); text-align: center; border: 1px solid rgba(179,154,105,.45); box-shadow: 0 18px 60px rgba(52,55,46,.12); }
 .rsvp-card .body-copy { margin: 20px auto 28px; }
 #rsvp-form { display: grid; text-align: left; gap: 9px; }
 #rsvp-form label { margin-top: 9px; font-size: .72rem; color: var(--olive-dark); font-weight: 500; }
@@ -80,7 +106,15 @@ a { color: inherit; }
 .online-rsvp { margin-top: 32px; padding-top: 23px; border-top: 1px solid var(--line); }
 .online-rsvp p:not(.eyebrow) { font-size: .74rem; color: var(--muted); line-height: 1.8; }
 .online-rsvp code { background: var(--cream); padding: 2px 4px; }
-.closing { background: var(--cream); padding-top: 80px; padding-bottom: 80px; }
+.closing {
+  position: relative;
+  isolation: isolate;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background:
+    linear-gradient(rgba(248, 244, 236, .90), rgba(248, 244, 236, .90)),
+    url("https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1800&q=85") center 50% / cover;
+}
 .closing > p:not(.signature) { color: var(--muted); font-size: .8rem; margin-top: 24px; }
 .closing .signature { margin: 8px 0 18px; }
 .closing-date { letter-spacing: .24em; font-size: .7rem !important; color: var(--olive) !important; }
@@ -105,7 +139,7 @@ footer { background: var(--olive-dark); color: #e7e3d7; text-align: center; padd
   .countdown div { min-width: 60px; }
   .countdown strong { font-size: 2.15rem; }
   .countdown span { font-size: .52rem; letter-spacing: .08em; }
-  .rsvp-section { padding: 65px 5%; }
+  .rsvp-section { padding: 65px 5%; background-position: center; }\n  .intro, .countdown-section, .details, .closing { background-attachment: scroll; }
 }
 @media (max-width: 390px) {
   .nav-links { gap: 8px; }
@@ -113,13 +147,4 @@ footer { background: var(--olive-dark); color: #e7e3d7; text-align: center; padd
   .countdown { gap: 6px; }
   .countdown div { min-width: 55px; }
   .countdown strong { font-size: 1.9rem; }
-}
-
-
-/* Dois destinos para confirmação pelo WhatsApp */
-.whatsapp-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
-.button-outline { width: 100%; background: transparent; border-color: var(--olive-dark); color: var(--olive-dark); }
-.button-outline:hover { background: var(--cream); }
-@media (max-width: 520px) {
-  .whatsapp-buttons { grid-template-columns: 1fr; }
 }
