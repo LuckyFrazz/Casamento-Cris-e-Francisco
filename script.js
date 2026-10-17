@@ -1,7 +1,11 @@
 // Cris & Francisco — interações do convite
-// As confirmações são enviadas pelo WhatsApp escolhido pelo convidado.
-const WHATSAPP_CRIS = "5586988548144";
-const WHATSAPP_FRANCISCO = "5586988183089";
+// 1) Troque o telefone abaixo pelo WhatsApp dos noivos, com código do país e DDD.
+// Exemplo: 5511999999999 (somente números).
+const WHATSAPP_NUMBER = "5586988183089";
+
+// 2) Para ativar a confirmação online, cole o link publicado do Google Forms.
+// Deixe vazio enquanto ainda não houver formulário.
+const ONLINE_FORM_URL = "";
 
 const weddingDate = new Date(2026, 11, 6, 19, 0, 0); // 6 dez 2026, horário provisório: 19h
 
@@ -32,14 +36,17 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-function sendConfirmation(phone) {
+const form = document.getElementById("rsvp-form");
+form.addEventListener("submit", event => {
+  event.preventDefault();
+
   const name = document.getElementById("guest-name").value.trim();
   const attending = document.getElementById("guest-attending").value;
   const count = document.getElementById("guest-count").value;
   const message = document.getElementById("guest-message").value.trim();
 
   if (!name || !attending) {
-    alert("Por favor, preencha seu nome e selecione sua resposta.");
+    alert("Por favor, preencha seu nome e sua resposta.");
     return;
   }
 
@@ -51,14 +58,17 @@ function sendConfirmation(phone) {
     message ? `Recado: ${message}` : ""
   ].filter(Boolean).join("\n");
 
-  const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+  if (WHATSAPP_NUMBER === "5500000000000") {
+    alert("O convite ainda precisa do número de WhatsApp dos noivos. No arquivo script.js, substitua WHATSAPP_NUMBER pelo número correto, com código do país e DDD.");
+    return;
+  }
+
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
   window.open(url, "_blank", "noopener,noreferrer");
+});
+
+const onlineLink = document.getElementById("online-form-link");
+if (ONLINE_FORM_URL.trim()) {
+  onlineLink.href = ONLINE_FORM_URL.trim();
+  onlineLink.hidden = false;
 }
-
-document.getElementById("confirm-cris").addEventListener("click", () => {
-  sendConfirmation(WHATSAPP_CRIS);
-});
-
-document.getElementById("confirm-francisco").addEventListener("click", () => {
-  sendConfirmation(WHATSAPP_FRANCISCO);
-});
