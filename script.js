@@ -1,7 +1,7 @@
 // Cris & Francisco — interações do convite
 // 1) Troque o telefone abaixo pelo WhatsApp dos noivos, com código do país e DDD.
 // Exemplo: 5511999999999 (somente números).
-const WHATSAPP_NUMBER = "5586988183089";
+const WHATSAPP_NUMBER = "5586988835944";
 
 // 2) Para ativar a confirmação online, cole o link publicado do Google Forms.
 // Deixe vazio enquanto ainda não houver formulário.
